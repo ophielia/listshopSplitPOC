@@ -80,6 +80,7 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.constraintlayout)
     coreLibraryDesugaring(libs.android.desugaring)
 }
 

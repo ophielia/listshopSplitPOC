@@ -8,6 +8,6 @@ internal interface ServiceLocator {
     val tagUCP: TagUCP
     val appAnalytics: AppAnalytics
     val breedAnalytics: BreedAnalytics
-    val listShopAnalytics: ListShopAnalytics,
+    val listShopAnalytics: ListShopAnalytics
     val httpClientAnalytics: HttpClientAnalytics
 }
