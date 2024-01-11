@@ -5,8 +5,9 @@ import co.touchlab.kmmbridgekickstart.db.Breed
 import co.touchlab.kmmbridgekickstart.db.KMMBridgeKickStartDb
 import co.touchlab.kmmbridgekickstart.sqldelight.transactionWithContext
 import app.cash.sqldelight.db.SqlDriver
-import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
+import co.touchlab.kmmbridgekickstart.data.model.Tag
+import co.touchlab.kmmbridgekickstart.db.TagLookupEntity
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -27,6 +28,15 @@ internal class DatabaseHelper(
             .flowOn(backgroundDispatcher)
 
     suspend fun insertBreeds(breeds: List<String>) {
+        breedAnalytics.insertingBreedsToDatabase(breeds.size)
+        dbRef.transactionWithContext(backgroundDispatcher) {
+            breeds.forEach { breed ->
+                dbRef.tableQueries.insertBreed(breed)
+            }
+        }
+    }
+
+    suspend fun insertTags(breeds: List<String>) {
         breedAnalytics.insertingBreedsToDatabase(breeds.size)
         dbRef.transactionWithContext(backgroundDispatcher) {
             breeds.forEach { breed ->

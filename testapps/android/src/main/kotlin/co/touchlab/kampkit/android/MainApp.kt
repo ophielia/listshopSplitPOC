@@ -7,6 +7,7 @@ import android.util.Log
 import co.touchlab.kampkit.android.models.BreedViewModel
 import co.touchlab.kmmbridgekickstart.Analytics
 import co.touchlab.kmmbridgekickstart.repository.BreedRepository
+import co.touchlab.kmmbridgekickstart.repository.TagUCP
 import co.touchlab.kmmbridgekickstart.startSDK
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
@@ -26,6 +27,7 @@ class MainApp : Application() {
                 module {
                     single<Context> { this@MainApp }
                     single<BreedRepository> { sdkHandle.breedRepository }
+                    single<TagUCP> { sdkHandle.tagUCP }
                     viewModel { BreedViewModel(get()) }
                     single<SharedPreferences> {
                         get<Context>().getSharedPreferences("KAMPSTARTER_SETTINGS", Context.MODE_PRIVATE)
