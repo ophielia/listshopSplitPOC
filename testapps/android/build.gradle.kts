@@ -80,6 +80,14 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.cardview)
+
+    implementation(libs.androidx.core)
+    implementation("androidx.cardview:cardview:1.0.0")
+
+
     implementation(libs.androidx.constraintlayout)
     coreLibraryDesugaring(libs.android.desugaring)
 }
