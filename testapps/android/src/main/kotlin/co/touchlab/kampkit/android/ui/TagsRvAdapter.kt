@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import co.touchlab.kampkit.android.R
-import co.touchlab.kmmbridgekickstart.data.model.Tag
+import com.listshop.bffpoc.data.model.Tag
 
 
 class TagsRvAdapter(var tags: List<Tag>) : RecyclerView.Adapter<TagsRvAdapter.TagViewHolder>() {

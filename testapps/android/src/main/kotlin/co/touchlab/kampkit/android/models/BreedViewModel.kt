@@ -2,10 +2,10 @@ package co.touchlab.kampkit.android.models
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import co.touchlab.kmmbridgekickstart.db.Breed
-import co.touchlab.kmmbridgekickstart.repository.BreedDataEvent
-import co.touchlab.kmmbridgekickstart.repository.BreedDataRefreshState
-import co.touchlab.kmmbridgekickstart.repository.BreedRepository
+import com.listshop.bffpoc.db.Breed
+import com.listshop.bffpoc.repository.BreedDataEvent
+import com.listshop.bffpoc.repository.BreedDataRefreshState
+import com.listshop.bffpoc.repository.BreedRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch

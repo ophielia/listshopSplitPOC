@@ -6,9 +6,9 @@ import android.content.SharedPreferences
 import android.util.Log
 import co.touchlab.kampkit.android.models.BreedViewModel
 import co.touchlab.kmmbridgekickstart.Analytics
-import co.touchlab.kmmbridgekickstart.repository.BreedRepository
-import co.touchlab.kmmbridgekickstart.repository.TagUCP
-import co.touchlab.kmmbridgekickstart.startSDK
+import com.listshop.bffpoc.repository.BreedRepository
+import com.listshop.bffpoc.repository.TagUCP
+import com.listshop.bffpoc.startSDK
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
 import org.koin.dsl.module

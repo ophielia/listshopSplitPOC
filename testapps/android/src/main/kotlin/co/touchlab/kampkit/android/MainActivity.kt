@@ -12,7 +12,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import co.touchlab.kampkit.android.models.BreedViewModel
 import co.touchlab.kampkit.android.ui.TagsRvAdapter
 import co.touchlab.kampkit.android.ui.theme.KaMPKitTheme
-import co.touchlab.kmmbridgekickstart.repository.TagUCP
+import com.listshop.bffpoc.repository.TagUCP
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
