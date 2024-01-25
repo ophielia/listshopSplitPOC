@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.ui
+package com.listshop.bffpoc.client.android.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import co.touchlab.kampkit.android.R
+import com.listshop.bffpoc.android.R
 import com.listshop.bffpoc.data.model.Tag
 
 

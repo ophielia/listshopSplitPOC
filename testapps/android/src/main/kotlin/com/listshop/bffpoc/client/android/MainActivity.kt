@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android
+package com.listshop.bffpoc.client.android
 
 import android.os.Bundle
 import android.widget.FrameLayout
@@ -9,9 +9,10 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import co.touchlab.kampkit.android.models.BreedViewModel
-import co.touchlab.kampkit.android.ui.TagsRvAdapter
-import co.touchlab.kampkit.android.ui.theme.KaMPKitTheme
+import com.listshop.bffpoc.android.R
+import com.listshop.bffpoc.client.android.models.BreedViewModel
+import com.listshop.bffpoc.client.android.ui.TagsRvAdapter
+import com.listshop.bffpoc.client.android.ui.theme.KaMPKitTheme
 import com.listshop.bffpoc.repository.TagUCP
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel

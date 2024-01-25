@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.ui.theme
+package com.listshop.bffpoc.client.android.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

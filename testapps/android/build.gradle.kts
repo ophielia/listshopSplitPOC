@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "co.touchlab.kampkit.android"
+    namespace = "com.listshop.bffpoc.android"
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         applicationId = "co.touchlab.kampkit"

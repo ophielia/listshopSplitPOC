@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.models
+package com.listshop.bffpoc.client.android.models
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

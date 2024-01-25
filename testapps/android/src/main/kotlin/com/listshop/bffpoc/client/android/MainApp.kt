@@ -1,10 +1,10 @@
-package co.touchlab.kampkit.android
+package com.listshop.bffpoc.client.android
 
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
-import co.touchlab.kampkit.android.models.BreedViewModel
+import com.listshop.bffpoc.client.android.models.BreedViewModel
 import co.touchlab.kmmbridgekickstart.Analytics
 import com.listshop.bffpoc.repository.BreedRepository
 import com.listshop.bffpoc.repository.TagUCP
