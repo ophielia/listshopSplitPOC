@@ -56,13 +56,20 @@ android {
         @Suppress("UnstableApiUsage")
         minSdk = libs.versions.minSdk.get().toInt()
     }
-    namespace = "co.touchlab.kmmbridgekickstart.breeds"
+    namespace = "com.listshop.bffpoc.breeds"
+
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/versions/9/*prev*bin"
+        }
+    }
 }
 
 addGithubPackagesRepository()
 
 sqldelight {
     databases.create("KMMBridgeKickStartDb") {
-        packageName.set("co.touchlab.kmmbridgekickstart.db")
+        packageName.set("com.listshop.bffpoc.db")
     }
 }
