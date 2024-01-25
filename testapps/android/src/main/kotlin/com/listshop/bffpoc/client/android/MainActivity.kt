@@ -4,20 +4,16 @@ import android.os.Bundle
 import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.listshop.bffpoc.android.R
-import com.listshop.bffpoc.client.android.models.BreedViewModel
 import com.listshop.bffpoc.client.android.ui.TagsRvAdapter
-import com.listshop.bffpoc.client.android.ui.theme.KaMPKitTheme
 import com.listshop.bffpoc.repository.TagUCP
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
