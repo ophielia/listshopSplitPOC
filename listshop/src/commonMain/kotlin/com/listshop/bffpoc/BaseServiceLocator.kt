@@ -18,7 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.datetime.Clock
 
 internal const val SETTINGS_KEY = "KMMBridgeKickStartSettings"
-internal const val DB_NAME = "KMMBridgeKickStartDb"
+internal const val DB_NAME = "ListshopPOCDb"
 
 internal abstract class BaseServiceLocator(private val analyticsHandle: AnalyticsHandle) :
     ServiceLocator {

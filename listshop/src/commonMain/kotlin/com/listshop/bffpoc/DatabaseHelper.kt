@@ -2,7 +2,7 @@ package com.listshop.bffpoc
 
 import app.cash.sqldelight.coroutines.asFlow
 import com.listshop.bffpoc.db.Breed
-import com.listshop.bffpoc.db.KMMBridgeKickStartDb
+import com.listshop.bffpoc.db.ListshopPOCDb
 import com.listshop.bffpoc.sqldelight.transactionWithContext
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.coroutines.mapToList
@@ -17,7 +17,7 @@ internal class DatabaseHelper(
     private val breedAnalytics: BreedAnalytics,
     private val backgroundDispatcher: CoroutineDispatcher
 ) {
-    private val dbRef: KMMBridgeKickStartDb = KMMBridgeKickStartDb(sqlDriver)
+    private val dbRef: ListshopPOCDb = ListshopPOCDb(sqlDriver)
 
     fun selectAllItems(): Flow<List<Breed>> =
         dbRef.tableQueries
@@ -35,28 +35,6 @@ internal class DatabaseHelper(
         }
     }
 
-    suspend fun insertTags(breeds: List<String>) {
-        breedAnalytics.insertingBreedsToDatabase(breeds.size)
-        dbRef.transactionWithContext(backgroundDispatcher) {
-            breeds.forEach { breed ->
-                dbRef.tableQueries.insertBreed(breed)
-            }
-        }
-    }
-
-    fun selectById(id: Long): Flow<List<Breed>> =
-        dbRef.tableQueries
-            .selectById(id)
-            .asFlow()
-            .mapToList(Dispatchers.Default)
-            .flowOn(backgroundDispatcher)
-
-    suspend fun deleteAll() {
-        breedAnalytics.databaseCleared()
-        dbRef.transactionWithContext(backgroundDispatcher) {
-            dbRef.tableQueries.deleteAll()
-        }
-    }
 
     suspend fun updateFavorite(breedId: Long, favorite: Boolean) {
         breedAnalytics.favoriteSaved(id = breedId, favorite = favorite)

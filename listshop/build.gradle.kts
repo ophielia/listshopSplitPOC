@@ -56,7 +56,7 @@ android {
         @Suppress("UnstableApiUsage")
         minSdk = libs.versions.minSdk.get().toInt()
     }
-    namespace = "com.listshop.bffpoc.breeds"
+    namespace = "com.listshop.bffpoc.listshop"
 
     packaging {
         resources {
@@ -69,7 +69,7 @@ android {
 addGithubPackagesRepository()
 
 sqldelight {
-    databases.create("KMMBridgeKickStartDb") {
+    databases.create("ListshopPOCDb") {
         packageName.set("com.listshop.bffpoc.db")
     }
 }

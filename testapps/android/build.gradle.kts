@@ -45,7 +45,7 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
-            excludes += "/META-INF/versions/9/*prev*bin"
+            excludes += "/META-INF/versions/9/previous-compilation-data.bin"
         }
     }
 }
@@ -71,10 +71,10 @@ val LIBRARY_VERSION:String by project
 dependencies {
     if (remoteBuild) {
         implementation("${GROUP}:analytics-android-debug:${LIBRARY_VERSION}.+")
-        implementation("${GROUP}:breeds-android-debug:${LIBRARY_VERSION}.+")
+        implementation("${GROUP}:listshop-android-debug:${LIBRARY_VERSION}.+")
     } else {
         implementation(project(":analytics"))
-        implementation(project(":breeds"))
+        implementation(project(":listshop"))
     }
     implementation(libs.bundles.app.ui)
     implementation(libs.koin.android)

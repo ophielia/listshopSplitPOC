@@ -4,7 +4,7 @@ import android.content.Context
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import co.touchlab.kmmbridgekickstart.AnalyticsHandle
-import com.listshop.bffpoc.db.KMMBridgeKickStartDb
+import com.listshop.bffpoc.db.ListshopPOCDb
 import com.listshop.bffpoc.repository.BreedRepository
 import com.listshop.bffpoc.repository.TagUCP
 import com.russhwolf.settings.Settings
@@ -29,7 +29,7 @@ internal class AndroidServiceLocator(
 
     override val sqlDriver: SqlDriver by lazy {
         AndroidSqliteDriver(
-            schema = KMMBridgeKickStartDb.Schema,
+            schema = ListshopPOCDb.Schema,
             context = context,
             name = DB_NAME
         )

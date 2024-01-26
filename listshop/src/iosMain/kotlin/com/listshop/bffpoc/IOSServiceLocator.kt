@@ -1,6 +1,6 @@
 package com.listshop.bffpoc
 
-import com.listshop.bffpoc.db.KMMBridgeKickStartDb
+import com.listshop.bffpoc.db.ListshopPOCDb
 import com.listshop.bffpoc.repository.BreedRepository
 import com.russhwolf.settings.NSUserDefaultsSettings
 import com.russhwolf.settings.Settings
@@ -27,7 +27,7 @@ internal class IOSServiceLocator(
 ) : BaseServiceLocator(analyticsHandle) {
 
     override val sqlDriver: SqlDriver by lazy {
-        NativeSqliteDriver(KMMBridgeKickStartDb.Schema, DB_NAME)
+        NativeSqliteDriver(ListshopPOCDb.Schema, DB_NAME)
     }
 
     override val settings: Settings by lazy { NSUserDefaultsSettings(userDefaults) }

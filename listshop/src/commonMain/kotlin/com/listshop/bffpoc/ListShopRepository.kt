@@ -3,14 +3,14 @@ package com.listshop.bffpoc
 import app.cash.sqldelight.db.SqlDriver
 import com.listshop.bffpoc.data.model.Tag
 import co.touchlab.kmmbridgekickstart.ListShopAnalytics
-import com.listshop.bffpoc.db.KMMBridgeKickStartDb
+import com.listshop.bffpoc.db.ListshopPOCDb
 import com.listshop.bffpoc.db.TagLookupEntity
 
 internal class ListShopRepository(
     sqlDriver: SqlDriver,
     private val listhopAnalytics: ListShopAnalytics,
 ) {
-    private val dbRef: KMMBridgeKickStartDb = KMMBridgeKickStartDb(sqlDriver)
+    private val dbRef: ListshopPOCDb = ListshopPOCDb(sqlDriver)
 
     fun selectAllTags(): List<Tag> {
         listhopAnalytics.fetchingTagsFromNetwork()

@@ -72,7 +72,7 @@ android-desugaring = { module = "com.android.tools:desugar_jdk_libs", version.re
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
 sharedlib-analytics = { module = "co.touchlab.kmmbridgekickstartskie:analytics-android-debug", version.ref = "sharedlib" }
-sharedlib-breeds = { module = "co.touchlab.kmmbridgekickstartskie:breeds-android-debug", version.ref = "sharedlib" }
+sharedlib-breeds = { module = "co.touchlab.kmmbridgekickstartskie:listshop-android-debug", version.ref = "sharedlib" }
 androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version = "1.3.2" }
 androidx-cardview = { group = "androidx.cardview", name = "cardview", version = "1.0.0" }
 androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version = "1.1.0" }
