@@ -5,17 +5,11 @@ import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import co.touchlab.kmmbridgekickstart.AnalyticsHandle
 import com.listshop.bffpoc.db.ListshopPOCDb
-import com.listshop.bffpoc.repository.BreedRepository
 import com.listshop.bffpoc.repository.TagUCP
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.SharedPreferencesSettings
-import io.ktor.client.engine.*
-import io.ktor.client.engine.okhttp.*
-
-internal fun breedStartup(context: Context, analyticsHandle: AnalyticsHandle): BreedRepository {
-    val locator = AndroidServiceLocator(context, analyticsHandle)
-    return locator.breedRepository
-}
+import io.ktor.client.engine.HttpClientEngine
+import io.ktor.client.engine.okhttp.OkHttp
 
 internal fun tagUCPStartup(context: Context, analyticsHandle: AnalyticsHandle): TagUCP {
     val locator = AndroidServiceLocator(context, analyticsHandle)

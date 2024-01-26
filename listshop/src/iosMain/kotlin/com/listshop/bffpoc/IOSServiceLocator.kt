@@ -1,23 +1,21 @@
 package com.listshop.bffpoc
 
-import com.listshop.bffpoc.db.ListshopPOCDb
-import com.listshop.bffpoc.repository.BreedRepository
-import com.russhwolf.settings.NSUserDefaultsSettings
-import com.russhwolf.settings.Settings
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.native.NativeSqliteDriver
 import co.touchlab.kmmbridgekickstart.AnalyticsHandle
+import com.listshop.bffpoc.db.ListshopPOCDb
 import com.listshop.bffpoc.repository.TagUCP
-import io.ktor.client.engine.*
-import io.ktor.client.engine.darwin.*
+import com.russhwolf.settings.NSUserDefaultsSettings
+import com.russhwolf.settings.Settings
+import io.ktor.client.engine.HttpClientEngine
+import io.ktor.client.engine.darwin.Darwin
 import platform.Foundation.NSUserDefaults
 
-fun breedStartup(analyticsHandle: AnalyticsHandle): BreedRepository {
-    val locator = IOSServiceLocator(NSUserDefaults(suiteName = SETTINGS_KEY), analyticsHandle = analyticsHandle)
-    return locator.breedRepository
-}
 fun tagUCPStartup(analyticsHandle: AnalyticsHandle): TagUCP {
-    val locator = IOSServiceLocator(NSUserDefaults(suiteName = SETTINGS_KEY), analyticsHandle = analyticsHandle)
+    val locator = IOSServiceLocator(
+        NSUserDefaults(suiteName = SETTINGS_KEY),
+        analyticsHandle = analyticsHandle
+    )
     return locator.tagUCP
 }
 
