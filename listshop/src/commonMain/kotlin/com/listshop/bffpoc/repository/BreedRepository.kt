@@ -40,11 +40,6 @@ class BreedRepository internal constructor(
 
     fun getBreeds(): Flow<List<Breed>> = dbHelper.selectAllItems()
 
-    suspend fun refreshBreedsIfStale() {
-        if (isBreedListStale()) {
-            refreshBreeds()
-        }
-    }
 
     suspend fun refreshBreeds() {
         mutableDataEvent.emit(BreedDataEvent.Loading)

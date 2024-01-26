@@ -12,8 +12,6 @@ SELECT * FROM Breed;
 selectById:
 SELECT * FROM Breed WHERE id = ?;
 
-selectByName:
-SELECT * FROM Breed WHERE name = ?;
 
 insertBreed:
 INSERT OR IGNORE INTO Breed(name)
