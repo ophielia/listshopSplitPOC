@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.listshop.bffpoc.android.R
+import com.listshop.bffpoc.test.android.R
 import com.listshop.bffpoc.data.model.Tag
 
 

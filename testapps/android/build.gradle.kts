@@ -4,10 +4,10 @@ plugins {
 }
 
 android {
-    namespace = "com.listshop.bffpoc.android"
+    namespace = "com.listshop.bffpoc.test.android"
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
-        applicationId = "co.touchlab.kampkit"
+        applicationId = "com.listshop.bffpoc.test.android"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1

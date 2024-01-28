@@ -8,7 +8,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.listshop.bffpoc.android.R
+import com.listshop.bffpoc.test.android.R
 import com.listshop.bffpoc.client.android.ui.TagsRvAdapter
 import com.listshop.bffpoc.repository.TagUCP
 import kotlinx.coroutines.MainScope
